@@ -1,0 +1,374 @@
+//1
+
+class Program
+ {
+     static void Main(string[] args)
+     {
+         int[][] jaggedArray = new int[2][];
+         jaggedArray[0] = new int[5] { 1, 3, 5, 7, 9 };
+         jaggedArray[1] = new int[4] { 2, 4, 6, 8 };
+         for (int row = 0; row < jaggedArray.Length; row++)
+         {
+             Console.Write("Element({0}):", row);
+             for (int col = 0; col < jaggedArray[row].Length; col++)
+             {
+                 Console.Write("{0} {1}", jaggedArray[row][col], col == jaggedArray[row].Length - 1 ? "" : "");
+             }
+             Console.WriteLine();
+
+         }
+     }
+
+ }
+
+//2
+
+class Point
+{
+    // Member variables
+    private int x;
+    private int y;
+
+    // Static field
+    private static int pointCount;
+
+    // Parameterless constructor
+    public Point()
+    {
+        x = 0;
+        y = 0;
+        pointCount++;
+    }
+
+    // Parameterized constructor
+    public Point(int x, int y)
+    {
+        this.x = x;
+        this.y = y;
+        pointCount++;
+    }
+
+    // Static constructor to initialize static field
+    static Point()
+    {
+        pointCount = 0;
+    }
+
+
+
+
+    // Static method to get the number of Point objects created
+    public static int GetPointCount()
+    {
+        return pointCount;
+    }
+
+    // Accessor methods to retrieve member variables
+    public int GetX()
+    {
+        return x;
+    }
+
+    public int GetY()
+    {
+        return y;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Test the Point class
+        Point point1 = new Point(); // Using parameterless constructor
+        Point point2 = new Point(2, 0); // Using parameterized constructor
+        Point point3 = new Point(4, 1); // Using parameterized constructor
+
+        // Accessor methods
+        Console.WriteLine("Point 1: ({0}, {1})", point1.GetX(), point1.GetY());
+        Console.WriteLine("Point 2: ({0}, {1})", point2.GetX(), point2.GetY());
+        Console.WriteLine("Point 3: ({0}, {1})", point3.GetX(), point3.GetY());
+
+        // Static method to get the number of Point objects created
+        Console.WriteLine("Number of Point objects created: {0}", Point.GetPointCount());
+    }
+}
+
+
+//3
+  class Point
+    {
+        // Private member variables
+        private int x;
+        private int y;
+
+        // Static field to keep track of the number of Point objects created
+        private static int count;
+
+        // Properties to access the private member variables
+        public int X
+        {
+            get { return x; }
+            set { x = value; }
+        }
+
+        public int Y
+        {
+            get { return y; }
+            set { y = value; }
+        }
+
+        // Indexer to access the private member variables by index
+        public int this[int index]
+        {
+            get
+            {
+                if (index == 0)
+                    return x;
+                else if (index == 1)
+                    return y;
+                else
+                    throw new IndexOutOfRangeException("Index must be 0 or 1.");
+            }
+            set
+            {
+                if (index == 0)
+                    x = value;
+                else if (index == 1)
+                    y = value;
+                else
+                    throw new IndexOutOfRangeException("Index must be 0 or 1.");
+            }
+        }
+
+        // Static constructor to initialize the static field
+        static Point()
+        {
+            count = 0;
+        }
+
+        // Parameterless constructor
+        public Point()
+        {
+            x = 0;
+            y = 0;
+            count++;
+        }
+
+        // Parameterized constructor
+        public Point(int x, int y)
+        {
+            this.x = x;
+            this.y = y;
+            count++;
+        }
+
+        // Static method to get the number of Point objects created
+        public static int GetNumberOfPoints()
+        {
+            return count;
+        }
+
+        // Test the class
+        public static void Main()
+        {
+            // Create three Point objects
+            Point p1 = new Point();
+            Point p2 = new Point(1, 2);
+            Point p3 = new Point(-1, -1);
+
+            // Access private data members using properties
+            p1.X = 10;
+            p1.Y = 20;
+
+            // Access private data members using indexers
+            p2[0] = 15;
+            p2[1] = 05;
+
+            // Display the coordinates of each point using properties and indexers
+            Console.WriteLine("Point 1: ({0}, {1})", p1.X, p1.Y);
+            Console.WriteLine("Point 2: ({0}, {1})", p2[0], p2[1]);
+            Console.WriteLine("Point 3: ({0}, {1})", p3.X, p3.Y);
+
+            // Display the number
+
+
+//4
+class Employee
+{
+    private int _empId;
+    private string _name;
+    protected decimal _salary;
+
+    // Default constructor
+    public Employee()
+    {
+        // Initialize default values or leave them as 0 or null
+    }
+
+    // Parameterized constructor
+    public Employee(int empId, string name, decimal salary)
+    {
+        _empId = empId;
+        _name = name;
+        _salary = salary;
+    }
+
+    // Properties
+    public int EmpId
+    {
+        get { return _empId; }
+        set { _empId = value; }
+    }
+
+    public string Name
+    {
+        get { return _name; }
+        set { _name = value; }
+    }
+
+    public decimal Salary
+    {
+        get { return _salary; }
+        set { _salary = value; }
+    }
+
+    // Method to display details
+    public void ShowDetails()
+    {
+        Console.WriteLine($"Employee ID: {_empId}");
+        Console.WriteLine($"Name: {_name}");
+        Console.WriteLine($"Salary: {_salary}");
+    }
+}
+
+class Manager : Employee
+{
+    private decimal _travelAllowance;
+
+    // Default constructor
+    public Manager()
+    {
+        // Initialize default values or leave them as 0
+    }
+
+    // Parameterized constructor
+    public Manager(int empId, string name, decimal salary, decimal travelAllowance)
+        : base(empId, name, salary)
+    {
+        _travelAllowance = travelAllowance;
+    }
+
+    // Method to display salary
+    public void ShowSalary()
+    {
+        Console.WriteLine($"Salary: {_salary}");
+    }
+
+    // Method to display total salary including travel allowance
+    public void ShowTotalSalary()
+    {
+        Console.WriteLine($"Total Salary: {_salary + _travelAllowance}");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Create an object of Employee
+        Employee employee = new Employee(1, "John Doe", 50000);
+
+        // Call the method showDetails for the employee object
+        employee.ShowDetails();
+
+        Console.WriteLine();
+
+        // Create an object of Manager
+        Manager manager = new Manager(2, "Jane Smith", 60000, 5000);
+
+        // Call the methods showSalary and showTotalSalary for the manager object
+        manager.ShowSalary();
+        manager.ShowTotalSalary();
+    }
+}
+
+//5
+class ExceptionHandlingExample
+ {
+     static void Main()
+     {   // Example 1: Handling array index out of range exception
+         try
+         {
+             int[] numbers = { 1, 2, 3, 4, 5 };
+             Console.WriteLine("Enter the index to access from the array:");
+             int index = Convert.ToInt32(Console.ReadLine());
+
+             int result = numbers[index];
+             Console.WriteLine("Value at index {0}: {1}", index, result);
+         }
+         catch (Exception ex)
+         {
+             Console.WriteLine("Error: " + ex.Message);
+         }
+
+         Console.WriteLine("\n--------------------------------\n");
+
+         // Example 2: Handling divide by zero exception
+         try
+         {
+             Console.WriteLine("Enter a number to divide 10 by:");
+             int divisor = Convert.ToInt32(Console.ReadLine());
+
+             int result = 10 / divisor;
+             Console.WriteLine("Result of 10 divided by {0}: {1}", divisor, result);
+         }
+         catch (Exception ex)
+         {
+             Console.WriteLine("Error: " + ex.Message);
+         }
+     }
+}
+
+//6
+public delegate void ArithmeticOperation(int a, int b);
+class Calculator
+{
+    // Method to add two numbers
+    public static void Add(int a, int b)
+    {
+        Console.WriteLine($"Sum: {a + b}");
+    }
+
+    // Method to subtract two numbers
+    public static void Subtract(int a, int b)
+    {
+        Console.WriteLine($"Difference: {a - b}");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Create delegate instances
+        ArithmeticOperation addDelegate = new ArithmeticOperation(Calculator.Add);
+        ArithmeticOperation subtractDelegate = new ArithmeticOperation(Calculator.Subtract);
+
+        // Input numbers
+        int num1 = 30;
+        int num2 = 5;
+
+        // Perform addition using the delegate
+        Console.WriteLine("Performing addition:");
+        addDelegate(num1, num2);
+
+        // Perform subtraction using the delegate
+        Console.WriteLine("\nPerforming subtraction:");
+        subtractDelegate(num1, num2);
+    }
+}
+
+
+//7
+
