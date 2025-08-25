@@ -1,0 +1,10 @@
+C:\Users\Martha\source\repos\test8\test8\bin\Debug\test8.exe.config
+C:\Users\Martha\source\repos\test8\test8\bin\Debug\test8.exe
+C:\Users\Martha\source\repos\test8\test8\bin\Debug\test8.pdb
+C:\Users\Martha\source\repos\test8\test8\obj\Debug\test8.csproj.AssemblyReference.cache
+C:\Users\Martha\source\repos\test8\test8\obj\Debug\KeyPressDetector.Form1.resources
+C:\Users\Martha\source\repos\test8\test8\obj\Debug\test8.Properties.Resources.resources
+C:\Users\Martha\source\repos\test8\test8\obj\Debug\test8.csproj.GenerateResource.cache
+C:\Users\Martha\source\repos\test8\test8\obj\Debug\test8.csproj.CoreCompileInputs.cache
+C:\Users\Martha\source\repos\test8\test8\obj\Debug\test8.exe
+C:\Users\Martha\source\repos\test8\test8\obj\Debug\test8.pdb

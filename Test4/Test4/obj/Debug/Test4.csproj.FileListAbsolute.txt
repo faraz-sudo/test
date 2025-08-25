@@ -1,0 +1,11 @@
+C:\Users\Martha\source\repos\Test4\Test4\bin\Debug\Test4.exe.config
+C:\Users\Martha\source\repos\Test4\Test4\bin\Debug\Test4.exe
+C:\Users\Martha\source\repos\Test4\Test4\bin\Debug\Test4.pdb
+C:\Users\Martha\source\repos\Test4\Test4\obj\Debug\Test4.csproj.AssemblyReference.cache
+C:\Users\Martha\source\repos\Test4\Test4\obj\Debug\Test4.Form1.resources
+C:\Users\Martha\source\repos\Test4\Test4\obj\Debug\Test4.Properties.Resources.resources
+C:\Users\Martha\source\repos\Test4\Test4\obj\Debug\Test4.csproj.GenerateResource.cache
+C:\Users\Martha\source\repos\Test4\Test4\obj\Debug\Test4.csproj.CoreCompileInputs.cache
+C:\Users\Martha\source\repos\Test4\Test4\obj\Debug\Test4.exe
+C:\Users\Martha\source\repos\Test4\Test4\obj\Debug\Test4.pdb
+C:\Users\Martha\source\repos\Test4\Test4\obj\Debug\Test4.exe.config
