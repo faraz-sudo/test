@@ -1,0 +1,11 @@
+C:\Users\Martha\source\repos\test7\test7\obj\Debug\test7.csproj.AssemblyReference.cache
+C:\Users\Martha\source\repos\test7\test7\obj\Debug\ColorChangingTextBoxApp.Form1.resources
+C:\Users\Martha\source\repos\test7\test7\obj\Debug\test7.Properties.Resources.resources
+C:\Users\Martha\source\repos\test7\test7\obj\Debug\test7.csproj.GenerateResource.cache
+C:\Users\Martha\source\repos\test7\test7\obj\Debug\test7.csproj.CoreCompileInputs.cache
+C:\Users\Martha\source\repos\test7\test7\bin\Debug\test7.exe.config
+C:\Users\Martha\source\repos\test7\test7\bin\Debug\test7.exe
+C:\Users\Martha\source\repos\test7\test7\bin\Debug\test7.pdb
+C:\Users\Martha\source\repos\test7\test7\obj\Debug\test7.exe
+C:\Users\Martha\source\repos\test7\test7\obj\Debug\test7.pdb
+C:\Users\Martha\source\repos\test7\test7\obj\Debug\test7.exe.config
